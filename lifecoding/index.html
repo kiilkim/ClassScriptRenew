@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Style the side navigation */
+.sidenav {
+  height: 100%;
+  width: 200px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+}
+
+a:hover{
+
+}
+
+/* Side navigation links */
+.sidenav a {
+  color: white;
+  padding: 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color on hover */
+.sidenav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Style the content */
+.content {
+  margin-left: 200px;
+  padding-left: 20px;
+}
+
+
+    </style>
+</head>
+<body>
+    <div class="sidenav">
+        <a href="#array">Array and loop</a>
+        <a href="#function">funciton</a>
+        <a href="#objection">objection</a>
+      </div>
+      
+      <div class="content">
+        <h2 id ="array">Array and loop</h2>
+        <p>배열과 반복문을 하이브리드 해서 해결
+            1. script 태그만듦
+            2. 데이터가 바뀌면 그 만들어진 로직을 건드리지 않고
+
+
+        </p>
+        <script>
+            var coworkers = ['kim', 'moon', 'uhm','park'];
+        </script>
+        
+        <ul>
+            <script>
+                var i = 0;
+                while(i < coworkers.length){
+                document.write('<li>'+coworkers[i]+'</li>')
+                    i++;
+                }
+            </script>
+
+        </ul>
+
+              <h1><a href="index.html">WEB</a></h1>
+
+            <ol>
+                <li><a href="1.html">HTML</a></li>
+                <li><a href="2.html">CSS</a></li>
+                <li><a href="3.html">JavaScript</a></li>
+            </ol>
+            <h2>JavaScript</h2>
+            <p>
+                JavaScript (/ˈdʒɑːvəˌskrɪpt/[6]), often abbreviated as JS, is a high-level, dynamic, weakly typed, prototype-based, multi-paradigm, and interpreted programming language. Alongside HTML and CSS, JavaScript is one of the three core technologies of World Wide Web content production. It is used to make webpages interactive and provide online programs, including video games. The majority of websites employ it, and all modern web browsers support it without the need for plug-ins by means of a built-in JavaScript engine. Each of the many JavaScript engines represent a different implementation of JavaScript, all based on the ECMAScript specification, with some engines not supporting the spec fully, and with many engines supporting additional features beyond ECMA.
+            </p>
+
+
+
+
+  <h2 id ="function">Function</h2>
+      
+  <script>
+      function BodysetColor(color) {
+        document.querySelector('body').style.backgroundColor = color;
+
+      }
+
+      function setColor(color) {
+        var alist = document.querySelectorAll('a');
+        var i = 0;
+        while(i < alist.length){
+            alist[i].style.color = color;
+            i = i + 1;
+        }
+
+
+       }
+
+
+        function nightDayHandler() {
+       
+        var target = document.querySelector('body');
+        if(this.value === 'night'){
+        BodysetColor('black');
+        target.style.color = 'white';
+        this.value = 'day';
+
+        setColor('powderblue');
+
+        } else {
+        BodysetColor('white');
+        target.style.color = 'black';
+        this.value = 'night';
+
+        setColor('blue');
+        }
+    }
+</script>
+
+
+
+<input type="button" value="night_day" onclick="nightDayHandler()">
+
+
+<h2 id ="objection">objection</h2>
+
+<p>
+    잘 정리하기 위한 도구! 
+</p>
+
+
+      </div>
+
+   
+    
+</body>
+</html>
